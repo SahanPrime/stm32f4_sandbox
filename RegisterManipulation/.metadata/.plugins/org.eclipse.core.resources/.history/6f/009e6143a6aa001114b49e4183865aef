@@ -1,0 +1,12 @@
+//Register Definition//
+
+#define uint32_t GPIOC_BASE =0x40020800UL
+#define uint32_t RCC_BASE=0x40023800UL
+#define uint32_t AHB1_OFFSET=0x30UL
+#define uint32_t AHB1_BASE= (*(volatile unsigned int*)(RCC_BASE + AHB1_OFFSET)
+#define uint32_t GPIO_MODER_OFFSET =0x00UL
+#define uint32_t GPIOC_MODER_BASE=(*(volatile unsigned int*)(GPIOC_BASE+GPIO_MODER_OFFSET))
+#define uint32_t GPIO_OTYPER_OFFSET=0x04UL
+#define uint32_t GPIOC_OTYPER_BASE=(*(volatile unsinged int*)(GPIOC_BASE+GPIO_OTYPER_OFFSET))
+
+//Bit masks//

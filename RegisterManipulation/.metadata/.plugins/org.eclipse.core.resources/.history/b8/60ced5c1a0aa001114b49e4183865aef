@@ -1,0 +1,4 @@
+//Register Definition//
+
+#define uint32_t GPIOC_BASE =0x40020800UL
+#define uint32_t RCC_BASE=0x40023800UL

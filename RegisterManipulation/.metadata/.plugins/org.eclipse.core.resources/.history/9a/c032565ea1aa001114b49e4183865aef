@@ -1,0 +1,6 @@
+//Register Definition//
+
+#define uint32_t GPIOC_BASE =0x40020800UL
+#define uint32_t RCC_BASE=0x40023800UL
+#define uint32_t AHB1_OFFSET=0x30UL
+#define uint32_t AHB1_BASE=RCC_BASE + AHB1_OFFSET

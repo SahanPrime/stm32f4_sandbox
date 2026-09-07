@@ -21,3 +21,18 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Meta
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-09-07 14:03:55.998
 !MESSAGE Indexed 'RegisterManipulation' (19 sources, 114 headers) in 6.66 sec: 10,196 declarations; 34,334 references; 5 unresolved inclusions; 874 syntax errors; 1,040 unresolved names (2.3%)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-07 17:22:05.829
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-07 17:22:05.829
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-07 17:22:08.537
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-07 17:22:08.537
+!MESSAGE port: 
