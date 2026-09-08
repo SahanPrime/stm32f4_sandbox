@@ -18,3 +18,82 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Meta
 
 !ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-07 14:03:13.935
 !MESSAGE port: 
+!SESSION 2026-09-08 13:51:31.670 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-08 13:51:46.810
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-08 13:51:49.551
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:51:51.140
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:51:51.140
+!MESSAGE port: 
+!SESSION 2026-09-08 13:52:12.013 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-08 13:52:16.821
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-08 13:52:19.614
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:52:27.563
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:52:27.563
+!MESSAGE port: 
+!SESSION 2026-09-08 13:52:52.226 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-08 13:52:58.085
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-08 13:53:01.077
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:53:04.887
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:53:04.888
+!MESSAGE port: 
+!SESSION 2026-09-08 13:53:54.032 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-08 13:53:59.785
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\RegisterManipulation\RegisterManipulation_old\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-08 13:54:03.347
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:54:06.742
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-08 13:54:06.743
+!MESSAGE port: 
