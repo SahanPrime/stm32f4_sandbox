@@ -199,3 +199,45 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-09-09 17:03:42.385
 !MESSAGE Indexed '3_LinkerscriptandStartupcode' (20 sources, 142 headers) in 6.95 sec: 11,471 declarations; 38,665 references; 5 unresolved inclusions; 121 syntax errors; 991 unresolved names (1.9%)
+!SESSION 2026-09-10 18:08:04.042 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-10 18:08:09.266
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-10 18:08:15.378
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-10 18:08:17.192
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-10 18:08:17.193
+!MESSAGE port: 
+!SESSION 2026-09-15 16:33:05.604 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\5_GPIOInputOutput\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\5_GPIOInputOutput\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-15 16:33:13.195
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-15 16:33:19.845
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-15 16:33:24.554
+!MESSAGE Indexed '5_GPIOInputOutput' (19 sources, 115 headers) in 2.31 sec: 10,202 declarations; 36,033 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.52%)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-15 16:33:34.019
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-15 16:33:34.021
+!MESSAGE port: 
