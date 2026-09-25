@@ -1,21 +1,35 @@
-14:20:45 **** Incremental Build of configuration Debug for project 7_GTIM ****
+13:27:45 **** Incremental Build of configuration Debug for project 8_UART ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/gpio.d" -MT"Core/Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/gpio.o"
-arm-none-eabi-gcc -o "7_GTIM.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\7_GTIM\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="7_GTIM.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 7_GTIM.elf
+arm-none-eabi-gcc "../Core/Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xC -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/uart.d" -MT"Core/Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/uart.o"
+arm-none-eabi-gcc -o "8_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\8_UART\STM32F401RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="8_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 8_UART.elf
  
-arm-none-eabi-size  7_GTIM.elf 
-arm-none-eabi-objdump -h -S 7_GTIM.elf  > "7_GTIM.list"
+arm-none-eabi-size  8_UART.elf 
+arm-none-eabi-objdump -h -S 8_UART.elf  > "8_UART.list"
    text	   data	    bss	    dec	    hex	filename
-   1036	      4	   1572	   2612	    a34	7_GTIM.elf
+   3804	     96	   1904	   5804	   16ac	8_UART.elf
 Finished building: default.size.stdout
  
-Finished building: 7_GTIM.list
+Finished building: 8_UART.list
  
-14:20:58 **** Incremental Build of configuration Debug for project 7_GTIM ****
+13:27:51 **** Incremental Build of configuration Debug for project 8_UART ****
 make -j16 all 
-arm-none-eabi-size  7_GTIM.elf 
+arm-none-eabi-size  8_UART.elf 
    text	   data	    bss	    dec	    hex	filename
-   1036	      4	   1572	   2612	    a34	7_GTIM.elf
+   3804	     96	   1904	   5804	   16ac	8_UART.elf
+Finished building: default.size.stdout
+ 
+13:36:05 **** Incremental Build of configuration Debug for project 8_UART ****
+make -j16 all 
+arm-none-eabi-size  8_UART.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3804	     96	   1904	   5804	   16ac	8_UART.elf
+Finished building: default.size.stdout
+ 
+13:36:58 **** Incremental Build of configuration Debug for project 8_UART ****
+make -j16 all 
+arm-none-eabi-size  8_UART.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3804	     96	   1904	   5804	   16ac	8_UART.elf
 Finished building: default.size.stdout
  

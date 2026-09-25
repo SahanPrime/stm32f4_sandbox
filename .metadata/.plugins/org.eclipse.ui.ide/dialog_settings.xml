@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Thakshana\Bare-Metal C Projects and Experiments\uart-bootloader-stm32l476\uart-bootloader-stm32l476"/>
 			<item value="C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\6_SysTick timer"/>
 		</list>
 		<section name="SmartImportWizard.dialogBounds">
