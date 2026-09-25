@@ -1,6 +1,6 @@
 # STM32F4 Sandbox
 
-A hands-on STM32F4 self-learning repository focused on bare-metal ARM Cortex-M4 development, register-level programming, startup code, linker scripts, GPIO, SysTick, and general-purpose timers.
+A hands-on STM32F4 self-learning repository focused on bare-metal ARM Cortex-M4 development, register-level programming, startup code, linker scripts, GPIO, SysTick, timers, and UART communication.
 
 The examples target the STM32F401RCTx family and are suitable for experimenting with an STM32F4 development board such as the STM32 Nucleo-F401RE.
 
@@ -15,6 +15,7 @@ The projects are organized as a progressive learning journey:
 5. GPIO input/output using STM32 registers
 6. SysTick-based delays
 7. General-purpose timer configuration
+8. UART serial communication
 
 ## Repository Structure
 
@@ -70,7 +71,17 @@ The projects are organized as a progressive learning journey:
 │   ├── Drivers/
 │   └── 7_GTIM.ioc
 │
+├── 8_UART/
+│   ├── Core/
+│   │   ├── Inc/                   UART and peripheral headers
+│   │   └── Src/                   UART initialization and main application
+│   ├── Drivers/
+│   ├── 8_UART.ioc                STM32CubeMX UART configuration
+│   └── STM32F401RCTX_FLASH.ld    Linker script
+│
 ├── en.dm00096844.pdf              STM32F4 reference documentation
+├── STM32F401XB.PDF                STM32F401xB reference documentation
+├── README.md
 └── .gitignore
 ```
 
@@ -82,9 +93,11 @@ The examples use the following STM32F4 peripherals:
 - **RCC AHB1 peripheral clock** for enabling GPIOC
 - **SysTick** for millisecond delays
 - **TIM2** for general-purpose timer operation
+- **USART2 on PA2** for UART transmit output
 - **Cortex-M4 startup and reset handling**
 
 The register-level examples assume that the LED is connected to GPIOC pin 13, as found on many STM32 Nucleo boards.
+The UART example transmits debug text using the STM32 USART2 peripheral over PA2.
 
 ## Tools
 
@@ -95,6 +108,7 @@ Install the following tools before building or flashing the firmware:
 - OpenOCD
 - STM32CubeIDE or another Eclipse-based STM32 development environment
 - An ST-LINK-compatible STM32F4 development board
+- A serial terminal such as Tera Term, PuTTY, or STM32CubeIDE's console for UART monitoring
 
 The Makefile uses:
 
@@ -125,7 +139,7 @@ Clean generated build files:
 make clean
 ```
 
-The Makefile compiles for a Cortex-M4 target using `-mcpu=cortex-m4`, `-mthumb`, and `-std=gnu11`. The final link step uses the custom `stm32_f4.ld` linker script and disables the standard library with `-nostdlib`.
+The Makefile compiles for a Cortex-M4 target using `-mcpu=cortex-m4`, `-mthumb`, and `-std=gnu11`. The final link step uses the custom `stm32_f4.ld` linker script and disables the standard library startup behavior where needed.
 
 ## Loading with OpenOCD
 
@@ -152,6 +166,7 @@ The following directories contain STM32CubeIDE-compatible projects:
 - `5_GPIOInputOutput/`
 - `6_SysTick timer/`
 - `7_GTIM/`
+- `8_UART/`
 
 To open a project:
 
@@ -167,7 +182,7 @@ The `.ioc` files contain STM32CubeMX project configuration, while the `Core/` an
 
 ### Direct Register Manipulation
 
-The projects in `3_LinkerandStartupcode/` and `RegisterManipulation_2/` access STM32 peripheral registers directly. The GPIO example enables the GPIOC peripheral clock, configures GPIOC pin 13 as an output, and toggles the output data register in an infinite loop.
+The projects in `3_LinkerandStartupcode/` and `RegisterManipulation_2/` access STM32 peripheral registers directly. The GPIO example enables the GPIOC peripheral clock, configures GPIOC pin 13 as output, and toggles the LED using register writes.
 
 ### GPIO Output
 
@@ -207,6 +222,26 @@ TIM2 is configured using:
 - Auto-reload value: `1000 - 1`
 - Update flag polling through the status register
 
+### UART Communication
+
+The `8_UART` project demonstrates transmitting text over USART2 using PA2. The application initializes the UART peripheral and sends a string to a serial terminal using `printf()`.
+
+```c
+#include <stdio.h>
+#include "uart.h"
+
+int main(void)
+{
+    uart_init();
+    while (1)
+    {
+        printf("Hello fromSTM32....\r\n");
+    }
+}
+```
+
+This example is useful for debugging output and validating that the board is running correctly. Connect a USB-to-TTL serial adapter or ST-LINK VCP output to a serial monitor and observe the output at 115200 baud.
+
 ## Custom Startup and Linker Code
 
 The custom startup example demonstrates what happens before `main()` executes.
@@ -231,11 +266,11 @@ It places program code and read-only data in Flash, initialized data in SRAM wit
 
 ## Reference Material
 
-The repository includes `en.dm00096844.pdf`, which provides STM32F4 device and peripheral reference information. Use it when checking peripheral base addresses, register offsets, GPIO configuration bits, RCC clock-enable registers, SysTick behavior, TIM2 configuration, and Flash/SRAM memory layout.
+The repository includes `en.dm00096844.pdf` and `STM32F401XB.PDF`, which provide STM32F4 device and peripheral reference information. Use them when checking peripheral base addresses, register offsets, GPIO configurations, UART settings, or timing details.
 
 ## Notes
 
-This repository is primarily an educational sandbox rather than a production-ready firmware framework. Several examples intentionally use direct register access and simple polling loops to make the underlying hardware behavior easier to study.
+This repository is primarily an educational sandbox rather than a production-ready firmware framework. Several examples intentionally use direct register access and simple polling loops to make the learning process clearer and easier to follow.
 
 Before using an example on different STM32 hardware, verify:
 
@@ -245,6 +280,7 @@ Before using an example on different STM32 hardware, verify:
 - Peripheral register addresses
 - Linker script memory regions
 - OpenOCD board configuration
+- UART baud rate and pin mapping
 
 ## Future Learning Areas
 
@@ -253,7 +289,8 @@ Possible next steps include:
 - Interrupt-driven GPIO handling
 - SysTick interrupt mode
 - Timer interrupts instead of polling
-- UART communication
+- UART receive and command parsing
+- UART interrupt-driven data handling
 - PWM generation
 - ADC sampling
 - NVIC configuration
