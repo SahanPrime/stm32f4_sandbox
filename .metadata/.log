@@ -1480,3 +1480,26 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Meta
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-09-21 14:12:07.873
 !MESSAGE Indexed '7_GTIM' (21 sources, 117 headers) in 1.55 sec: 10,208 declarations; 36,006 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0.52%)
+!SESSION 2026-09-21 21:20:19.724 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Thakshana\Bare-Metal C Projects and Experiments\uart-bootloader-stm32l476\uart-bootloader-stm32l476\application\Application\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Thakshana\Bare-Metal C Projects and Experiments\uart-bootloader-stm32l476\uart-bootloader-stm32l476\application\Application\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-09-21 21:20:28.844
+!MESSAGE Log4j2 initialized with config file C:\Thakshana\Bare-Metal C Projects and Experiments\stm32f4_sandbox\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-09-21 21:20:36.084
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-09-21 21:20:43.213
+!MESSAGE Indexed 'Application' (28 sources, 100 headers) in 3.55 sec: 11,136 declarations; 47,586 references; 22 unresolved inclusions; 1,302 syntax errors; 3,509 unresolved names (5.6%)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-21 21:20:46.967
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-09-21 21:20:46.968
+!MESSAGE port: 
