@@ -1,24 +1,61 @@
-# 7_GTIM
+# 7. General Purpose Timer (GTIM)
 
-This folder contains the general-purpose timer example for the STM32F4 sandbox. It demonstrates timer-based periodic updates and uses a TIM2 configuration for a simple LED toggle workflow.
+This project introduces the STM32 general-purpose timer peripheral, also commonly referred to as GTIM. It is more advanced than the simple SysTick timer and provides richer timing control for embedded applications.
 
-## What is inside
+## Why timers matter
 
-- `Core/` — source files for GPIO, timer configuration, and the main loop
-- `Drivers/` — HAL and CMSIS driver code
-- `.settings/` — IDE-specific configuration
-- `Debug/` — build output, object files, linker map, and ELF image
-- `Core/Inc/tim.h` — timer initialization declarations
-- `Core/Src/tim.c` — timer configuration implementation
-- `7_GTIM.ioc` — STM32CubeMX project configuration
+Timers are used to measure elapsed time, trigger periodic events, generate PWM signals, and synchronize hardware operations. Embedded systems almost always need some form of timekeeping and event scheduling.
 
-## Purpose
+The general-purpose timer in STM32 devices supports:
 
-This project is intended to teach:
+- time base generation
+- compare events
+- pulse width modulation
+- update interrupts
+- synchronization with other peripherals
 
-- how to configure a general-purpose timer (TIM2)
-- how to use timer update events and flags
-- how to create periodic delays or state changes without blocking loops
-- how timer peripherals integrate with GPIO-based outputs
+## What this project demonstrates
 
-This example is a good bridge between simple delay code and more complex timer-driven firmware.
+This lesson focuses on configuring a timer for a periodic update event and using it to orchestrate a simple application behavior. The project usually includes:
+
+- `Core/Inc/tim.h` — timer declarations and configuration
+- `Core/Src/tim.c` — timer initialization and setup
+- `Core/Src/main.c` — application logic reacting to timer events
+- GPIO configuration for LED or output pin control
+- project files and generated build artifacts
+
+## Typical application flow
+
+A general-purpose timer is configured with a prescaler and auto-reload value, then the application:
+
+- starts the timer
+- waits for an update flag or interrupt
+- toggles an output or LED
+- repeats the process at a defined interval
+
+## Why this is a major learning milestone
+
+The general-purpose timer is one of the most important peripherals in embedded design because it is used in countless applications such as:
+
+- PWM motor control
+- digital signal generation
+- sensor sampling
+- fixed-rate periodic tasks
+- hardware timing measurements
+
+## Learning outcomes
+
+After reviewing this project, the reader should understand:
+
+- how prescalers and reload values affect timer periods
+- how timers are configured for periodic activity
+- how timers interact with GPIO output or interrupts
+- the difference between SysTick and a more capable general-purpose timer
+
+## Recommended next step
+
+After learning timer configuration, move to UART communication to learn how the MCU sends data to a terminal and how serial debugging works in practice.
+
+---
+
+GTIM is a key step from basic software delays to a more realistic embedded-system timing model.
